@@ -14,7 +14,7 @@ public class CorsConfig {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/**")
-                         .allowedOrigins("https://bharatsamvad.netlify.app")
+                         .allowedOrigins("http://localhost:3000","https://bharatsamvad.netlify.app")
                          .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                         .allowedHeaders("*")
                         .allowCredentials(true);
