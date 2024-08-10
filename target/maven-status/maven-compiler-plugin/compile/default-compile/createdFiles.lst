@@ -1,0 +1,7 @@
+com\development\newswebsite\repository\ArticleRepository.class
+com\development\newswebsite\v1\ArticleController.class
+com\development\newswebsite\config\CorsConfig$1.class
+com\development\newswebsite\config\CorsConfig.class
+com\development\newswebsite\domain\Article.class
+com\development\newswebsite\NewswebsiteApplication.class
+com\development\newswebsite\service\ArticleService.class

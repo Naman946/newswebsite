@@ -1,8 +1,12 @@
 # Ignore version control directories
 .git/
 
-# Ignore the target directory and its contents
-target/
+# Ignore Maven build files and directories
+.mvn/
 
-# Explicitly include the specific JAR file within the target directory
-!target/newswebsite-0.0.1-SNAPSHOT.jar
+# Ignore files not needed in the Docker image
+*.log
+*.tmp
+
+# Do not ignore target directory or specific files if needed
+!target/
