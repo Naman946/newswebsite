@@ -12,6 +12,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/v1/articles")
+@CrossOrigin(origins = "https://bharatsamvad.netlify.app", allowCredentials = "true")
 public class ArticleController {
     @Autowired
     private ArticleService articleService;
