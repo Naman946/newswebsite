@@ -1,14 +1,14 @@
-# Use the official OpenJDK image as a base image
+# Use the official OpenJDK image from the Docker Hub
 FROM openjdk:17-jdk-slim
 
-# Set the working directory inside the container
+# Set the working directory in the container
 WORKDIR /app
 
-# Copy the JAR file into the container
-COPY target/newswebsite-0.0.1-SNAPSHOT.jar /app/newswebsite.jar
+# Copy the JAR file from the target directory into the container
+COPY target/newswebsite-0.0.1-SNAPSHOT.jar app.jar
 
-# Expose the port the application runs on
+# Expose the port your application will run on
 EXPOSE 8080
 
-# Command to run the JAR file
-ENTRYPOINT ["java", "-jar", "/app/newswebsite.jar"]
+# Run the JAR file
+ENTRYPOINT ["java", "-jar", "/app/app.jar"]
