@@ -26,10 +26,13 @@ public class ArticleController {
     @PostMapping
     public Article createArticle(@RequestParam("title") String title,
                                  @RequestParam("content") String content,
-                                 @RequestParam("image") MultipartFile file) throws IOException {
+                                 @RequestParam("image") MultipartFile file,
+                                 @RequestParam("categoryId") String categoryId)
+                                		 throws IOException {
         Article article = new Article();
         article.setTitle(title);
         article.setContent(content);
+        article.setCategoryId(categoryId);
         
         // Convert image to Base64 string
         byte[] fileContent = file.getBytes();
